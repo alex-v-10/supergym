@@ -6,6 +6,7 @@
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
   text-align: center;
   user-select: none;
 
@@ -14,8 +15,6 @@
   background-color: $color-transparent;
   border: 2px solid $color-default-black;
   cursor: pointer;
-
-  transition: opacity $trans-default;
 
   &--red {
     background-color: $color-torch-red;
@@ -27,7 +26,5 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
-  }
+  @include interactive-1;
 }
