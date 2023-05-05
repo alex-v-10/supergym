@@ -1,0 +1,36 @@
+.video__preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: url("../../img/about/play.png") no-repeat;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  @include interactive-1;
+  @include interactive--shadow-white;
+}
+
+[data-video] .video__frame {
+  display: none;
+}
+
+[data-video].is-active .video__frame {
+  display: block;
+}
+
+[data-video].is-active .video__preview {
+  display: none;
+}

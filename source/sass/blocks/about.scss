@@ -1,0 +1,49 @@
+.about__container {
+  padding: 120px 0 235px;
+  display: flex;
+  position: relative;
+}
+
+.about__text {
+  padding: 50px 85px 50px 60px;
+  flex: 0 0 500px;
+}
+
+.about__image {
+  flex: 0 1 660px;
+}
+
+.about__video {
+  position: absolute;
+  top: 408px;
+  left: 437px;
+  width: 364px;
+  height: 228px;
+}
+
+.about__title {
+  margin: 0;
+  font-family: $ff-alumni-sans;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+}
+
+.about__description {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.about__text-content {
+  p {
+    font-weight: 300;
+    line-height: 150%;
+
+    @include vp-1199 {
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+}

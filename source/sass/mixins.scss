@@ -150,15 +150,15 @@
 @mixin interactive-1 {
   transition: opacity $trans-default, box-shadow $trans-default;
   @include hover-focus {
-    opacity: 0.7;
+    opacity: 0.8;
 
     &:active {
-      opacity: 0.4;
+      opacity: 0.6;
     }
   }
 
   &:active {
-    opacity: 0.4;
+    opacity: 0.6;
   }
 }
 

@@ -602,20 +602,20 @@ button,
 }
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
-    opacity: 0.7;
+    opacity: 0.8;
   }
   .btn:hover:not(.focus-visible):active {
-    opacity: 0.4;
+    opacity: 0.6;
   }
 }
 .btn.focus-visible:focus {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .btn.focus-visible:focus:active {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 .btn:active {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .modal {
@@ -1265,6 +1265,78 @@ button,
   color: #15ab07;
 }
 
+.video__preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: url("../../img/about/play.png") no-repeat;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+@media (hover: hover) {
+  .video__button:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+  .video__button:hover:not(.focus-visible):active {
+    opacity: 0.6;
+  }
+}
+.video__button.focus-visible:focus {
+  opacity: 0.8;
+}
+.video__button.focus-visible:focus:active {
+  opacity: 0.6;
+}
+.video__button:active {
+  opacity: 0.6;
+}
+@media (hover: hover) {
+  .video__button:hover:not(.focus-visible) {
+    -webkit-box-shadow: 0 0 10px #ffffff;
+            box-shadow: 0 0 10px #ffffff;
+  }
+}
+.video__button.focus-visible:focus {
+  -webkit-box-shadow: 0 0 10px #ffffff;
+          box-shadow: 0 0 10px #ffffff;
+}
+.video__button:active {
+  -webkit-box-shadow: 0 0 10px #ffffff;
+          box-shadow: 0 0 10px #ffffff;
+}
+
+[data-video] .video__frame {
+  display: none;
+}
+
+[data-video].is-active .video__frame {
+  display: block;
+}
+
+[data-video].is-active .video__preview {
+  display: none;
+}
+
 .intro {
   color: #ffffff;
   background: conic-gradient(from 150.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
@@ -1328,20 +1400,20 @@ button,
 }
 @media (hover: hover) {
   .intro__logo:hover:not(.focus-visible) {
-    opacity: 0.7;
+    opacity: 0.8;
   }
   .intro__logo:hover:not(.focus-visible):active {
-    opacity: 0.4;
+    opacity: 0.6;
   }
 }
 .intro__logo.focus-visible:focus {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .intro__logo.focus-visible:focus:active {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 .intro__logo:active {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .intro__contacts a {
@@ -1375,20 +1447,20 @@ button,
 }
 @media (hover: hover) {
   .intro__contacts a:hover:not(.focus-visible) {
-    opacity: 0.7;
+    opacity: 0.8;
   }
   .intro__contacts a:hover:not(.focus-visible):active {
-    opacity: 0.4;
+    opacity: 0.6;
   }
 }
 .intro__contacts a.focus-visible:focus {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .intro__contacts a.focus-visible:focus:active {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 .intro__contacts a:active {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .intro__content {
@@ -1578,6 +1650,64 @@ button,
 .intro__button:active {
   -webkit-box-shadow: 0 0 10px #ffffff;
           box-shadow: 0 0 10px #ffffff;
+}
+
+.about__container {
+  padding: 120px 0 235px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.about__text {
+  padding: 50px 85px 50px 60px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 500px;
+          flex: 0 0 500px;
+}
+
+.about__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 660px;
+          flex: 0 1 660px;
+}
+
+.about__video {
+  position: absolute;
+  top: 408px;
+  left: 437px;
+  width: 364px;
+  height: 228px;
+}
+
+.about__title {
+  margin: 0;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+}
+
+.about__description {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.about__text-content p {
+  font-weight: 300;
+  line-height: 150%;
+}
+@media (max-width: 1199px) {
+  .about__text-content p:not(:first-child) {
+    display: none;
+  }
+}
+
+.subscription {
+  height: 300px;
+  background-color: #f8f9fc;
 }
 
 /* @mixin hover-focus {
