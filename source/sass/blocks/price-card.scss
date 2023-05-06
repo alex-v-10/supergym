@@ -5,13 +5,17 @@
 }
 
 .price-card__container {
-  padding: 61px;
+  padding: 57px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $color-default-white;
+
+  @include vp-767 {
+    padding: 42px 42px 45px;
+  }
 }
 
 .price-card__title {
@@ -19,27 +23,46 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 29px;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 110.16%;
+  }
 }
 
 .price-card__description {
-  margin: 0 0 96px;
+  margin: 0 0 65px;
   line-height: 150%;
   color: $color-grey-2;
+
+  @include vp-767 {
+    margin: 0 0 54px;
+  }
 }
 
 .price-card__price {
   position: relative;
-  margin: 0 0 60px;
+  margin: 0 0 33px;
+
+  @include vp-767 {
+    margin: 0 -5px 29px 0;
+  }
 
   & .shadow {
     position: absolute;
-    top: -56px;
-    left: -30px;
+    top: -53px;
+    left: -20px;
     font-weight: 700;
     font-size: 100px;
     line-height: 150%;
     color: $color-grey-3;
     opacity: 0.5;
+
+    @include vp-767 {
+      font-size: 80px;
+      top: -44px;
+      left: -17px;
+    }
   }
 }
 
@@ -49,14 +72,22 @@
   font-size: 60px;
   line-height: 150%;
   color: $color-blue-3;
+
+  @include vp-767 {
+    font-size: 48px;
+  }
 }
 
 .price-card__rub {
   position: relative;
   font-weight: 700;
-  font-size: 60px;
+  font-size: 58px;
   line-height: 150%;
   z-index: 1;
+
+  @include vp-767 {
+    font-size: 46px;
+  }
 }
 
 .price-card__button {

@@ -9,23 +9,54 @@
   flex-direction: column;
   align-items: center;
 
+  @include vp-1199 {
+    padding: 100px 60px;
+  }
+
+  @include vp-767 {
+    padding: 65px 0 70px;
+  }
+
   &::before {
     content: "";
     position: absolute;
-    right: -190px;
-    bottom: -140px;
+    right: -210px;
+    bottom: -96px;
     width: 320px;
     height: 380px;
-    background: url("../../img/price/pancake.png") 0 0/320px auto no-repeat;;
+    background: url("../../img/price/pancake.png") 0 0/320px auto no-repeat;
+    transform: rotate(150deg);
+
+    @include vp-1199 {
+      right: -70px;
+      transform: rotate(150deg) scale(0.9);
+    }
+
+    @include vp-767 {
+      display: none;
+    }
   }
 }
 
 .price__title {
-  margin: 0 0 5px;
+  margin: 0 0 5px -5px;
+  font-family: $ff-alumni-sans;
   font-weight: 600;
   font-size: 54px;
-  line-height: 65px;
+  line-height: 60px;
   letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin: 0 0 5px -15px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 5px -10px;
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 .price__tabs {
@@ -33,11 +64,21 @@
   flex-direction: column;
   align-items: center;
   z-index: 1;
+  width: 100%;
 }
 
 .price__controls {
   position: relative;
-  margin: 0 0 40px;
+  margin: 0 0 36px;
+  display: flex;
+
+  @include vp-1199 {
+    margin: 0 0 45px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 36px;
+  }
 
   &::before {
     content: "";
@@ -53,21 +94,39 @@
 .price__button {
   position: relative;
   margin: 0;
-  padding: 20px 0;
+  padding: 15px 0 13px;
   font-size: 20px;
   line-height: 150%;
   background-color: $color-transparent;
   border: none;
   cursor: pointer;
+  user-select: none;
   opacity: 0.5;
 
+  @include vp-1199 {
+    font-size: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+  }
+
   &:not(:last-child) {
-    margin: 0 46px 0 0
+    margin: 0 45px 0 0;
+
+    @include vp-1199 {
+      margin: 0 55px 0 0;
+    }
+
+    @include vp-767 {
+      margin: 0 45px 0 0;
+    }
   }
 
   @include interactive-1;
 
   transition: opacity $trans-default, box-shadow $trans-default;
+
   @include hover-focus {
     &::before {
       content: "";
@@ -89,16 +148,41 @@
   }
 }
 
+.price__content {
+  width: 100%;
+}
+
 .price__cards {
   width: 100%;
   display: flex;
+  justify-content: center;
   gap: 40px;
 
   @include vp-1365 {
     gap: 2.93vw;
   }
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+    gap: 41px;
+  }
+
+  @include vp-767 {
+    gap: 37px;
+  }
 }
 
 .price__card {
   width: 360px;
+  flex: 0 0 auto;
+
+  @include vp-1199 {
+    width: 442px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    max-width: 442px;
+  }
 }
