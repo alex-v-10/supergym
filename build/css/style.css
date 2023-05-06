@@ -602,20 +602,20 @@ button,
 }
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
-    opacity: 0.8;
+    opacity: 0.7;
   }
   .btn:hover:not(.focus-visible):active {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 }
 .btn.focus-visible:focus {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .btn.focus-visible:focus:active {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 .btn:active {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .modal {
@@ -1312,20 +1312,20 @@ button,
 }
 @media (hover: hover) {
   .video__button:hover:not(.focus-visible) {
-    opacity: 0.8;
+    opacity: 0.7;
   }
   .video__button:hover:not(.focus-visible):active {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 }
 .video__button.focus-visible:focus {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .video__button.focus-visible:focus:active {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 .video__button:active {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 @media (hover: hover) {
   .video__button:hover:not(.focus-visible) {
@@ -1421,20 +1421,20 @@ button,
 }
 @media (hover: hover) {
   .intro__logo:hover:not(.focus-visible) {
-    opacity: 0.8;
+    opacity: 0.7;
   }
   .intro__logo:hover:not(.focus-visible):active {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 }
 .intro__logo.focus-visible:focus {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .intro__logo.focus-visible:focus:active {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 .intro__logo:active {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .intro__contacts a {
@@ -1468,20 +1468,20 @@ button,
 }
 @media (hover: hover) {
   .intro__contacts a:hover:not(.focus-visible) {
-    opacity: 0.8;
+    opacity: 0.7;
   }
   .intro__contacts a:hover:not(.focus-visible):active {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 }
 .intro__contacts a.focus-visible:focus {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .intro__contacts a.focus-visible:focus:active {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 .intro__contacts a:active {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .intro__content {
@@ -1836,9 +1836,137 @@ button,
   }
 }
 
-.subscription {
-  height: 300px;
-  background-color: #f8f9fc;
+.price {
+  padding: 120px 0;
+  background: #f8f9fc;
+}
+
+.price__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price__title {
+  margin: 0 0 5px;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+}
+
+.price__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price__controls {
+  position: relative;
+  margin: 0 0 40px;
+}
+.price__controls::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(120, 120, 120, 0.2);
+}
+
+.price__button {
+  position: relative;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 20px;
+  line-height: 150%;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+.price__button:not(:last-child) {
+  margin: 0 46px 0 0;
+}
+@media (hover: hover) {
+  .price__button:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+  .price__button:hover:not(.focus-visible):active {
+    opacity: 0.5;
+  }
+}
+.price__button.focus-visible:focus {
+  opacity: 0.7;
+}
+.price__button.focus-visible:focus:active {
+  opacity: 0.5;
+}
+.price__button:active {
+  opacity: 0.5;
+}
+@media (hover: hover) {
+  .price__button:hover:not(.focus-visible)::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #102654;
+  }
+  .price__button:hover:not(.focus-visible):active {
+    opacity: 0.4;
+  }
+}
+.price__button.focus-visible:focus::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #102654;
+}
+.price__button.focus-visible:focus:active {
+  opacity: 0.4;
+}
+.price__button:active {
+  opacity: 0.4;
+}
+
+.price__cards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.93vw;
+}
+
+.price__card {
+  background-color: #102654;
+  aspect-ratio: 3.6/4.48;
+  width: 360px;
 }
 
 /* @mixin hover-focus {

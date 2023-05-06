@@ -1,0 +1,90 @@
+.price {
+  padding: 120px 0;
+  // background: url("../../img/price/pancake.png") 0 0/320px auto no-repeat, $color-grey;
+  background: $color-grey;
+}
+
+.price__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price__title {
+  margin: 0 0 5px;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+}
+
+.price__tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price__controls {
+  position: relative;
+  margin: 0 0 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+  }
+}
+
+.price__button {
+  position: relative;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 20px;
+  line-height: 150%;
+  background-color: $color-transparent;
+  border: none;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin: 0 46px 0 0
+  }
+
+  @include interactive-1;
+
+  transition: opacity $trans-default, box-shadow $trans-default;
+  @include hover-focus {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $color-default-black;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.price__cards {
+  width: 100%;
+  display: flex;
+  gap: 2.93vw;
+}
+
+.price__card {
+  background-color: $color-default-black;
+  aspect-ratio: 3.6 / 4.48;
+  width: 360px;
+}
