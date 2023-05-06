@@ -374,6 +374,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 html {
@@ -1837,11 +1838,12 @@ button,
 }
 
 .price {
-  padding: 120px 0;
   background: #f8f9fc;
 }
 
 .price__container {
+  padding: 120px 0;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1852,6 +1854,15 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.price__container::before {
+  content: "";
+  position: absolute;
+  right: -190px;
+  bottom: -140px;
+  width: 320px;
+  height: 380px;
+  background: url("../../img/price/pancake.png") 0 0/320px auto no-repeat;
 }
 
 .price__title {
@@ -1873,6 +1884,7 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1;
 }
 
 .price__controls {
@@ -1898,6 +1910,7 @@ button,
   background-color: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
+  opacity: 0.5;
   -webkit-transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
   transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
   -o-transition: opacity 0.3s ease, box-shadow 0.3s ease;
@@ -1960,13 +1973,133 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2.93vw;
+  gap: 40px;
+}
+@media (max-width: 1365px) {
+  .price__cards {
+    gap: 2.93vw;
+  }
 }
 
 .price__card {
-  background-color: #102654;
-  aspect-ratio: 3.6/4.48;
   width: 360px;
+}
+
+.price-card {
+  padding: 7px;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.price-card__container {
+  padding: 61px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+}
+
+.price-card__title {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+}
+
+.price-card__description {
+  margin: 0 0 96px;
+  line-height: 150%;
+  color: #495a7d;
+}
+
+.price-card__price {
+  position: relative;
+  margin: 0 0 60px;
+}
+.price-card__price .shadow {
+  position: absolute;
+  top: -56px;
+  left: -30px;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 150%;
+  color: #E8E8E8;
+  opacity: 0.5;
+}
+
+.price-card__number {
+  position: relative;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 150%;
+  color: #103aae;
+}
+
+.price-card__rub {
+  position: relative;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 150%;
+  z-index: 1;
+}
+
+.price-card__button {
+  padding: 27px 20px;
+  min-width: 206px;
+  border: none;
+  -webkit-box-shadow: inset 2px 2px #102654, inset -2px -2px #102654;
+          box-shadow: inset 2px 2px #102654, inset -2px -2px #102654;
+}
+@media (hover: hover) {
+  .price-card__button:hover:not(.focus-visible) {
+    -webkit-box-shadow: 0 0 10px #102654;
+            box-shadow: 0 0 10px #102654;
+  }
+}
+.price-card__button.focus-visible:focus {
+  -webkit-box-shadow: 0 0 10px #102654;
+          box-shadow: 0 0 10px #102654;
+}
+.price-card__button:active {
+  -webkit-box-shadow: 0 0 10px #102654;
+          box-shadow: 0 0 10px #102654;
+}
+
+.price-card:hover {
+  background: -o-linear-gradient(320deg, #ed0233 12.6%, #003eb7 90.31%);
+  background: linear-gradient(130deg, #ed0233 12.6%, #003eb7 90.31%);
+}
+.price-card:hover .price-card__button {
+  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+@media (hover: hover) {
+  .price-card:hover .price-card__button:hover:not(.focus-visible) {
+    -webkit-box-shadow: 0 0 10px #102654;
+            box-shadow: 0 0 10px #102654;
+  }
+}
+.price-card:hover .price-card__button.focus-visible:focus {
+  -webkit-box-shadow: 0 0 10px #102654;
+          box-shadow: 0 0 10px #102654;
+}
+.price-card:hover .price-card__button:active {
+  -webkit-box-shadow: 0 0 10px #102654;
+          box-shadow: 0 0 10px #102654;
 }
 
 /* @mixin hover-focus {
