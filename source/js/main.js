@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {initNoJs} from './modules/no-js';
 import {initVideo} from './modules/video';
 import {initShadow} from './modules/shadow';
+import {initTabs} from './modules/tabs/init-tabs';
 
 // ---------------------------------
 
@@ -26,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    initTabs();
     initShadow();
   });
 });
