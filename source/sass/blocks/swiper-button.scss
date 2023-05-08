@@ -1,11 +1,27 @@
 .swiper-button--next {
   right: -65px;
   left: auto;
+
+  @include vp-1199 {
+    right: -50px;
+  }
+
+  @include vp-767 {
+    right: -40px;
+  }
 }
 
 .swiper-button--prev {
   right: auto;
   left: -65px;
+
+  @include vp-1199 {
+    left: -50px;
+  }
+
+  @include vp-767 {
+    left: -40px;
+  }
 }
 
 .swiper-button {
@@ -32,5 +48,10 @@
 
   &:active {
     transform: scale(0.9);
+
+    &::before,
+    &::after {
+      color: $color-red;
+    }
   }
 }

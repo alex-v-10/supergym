@@ -2,14 +2,31 @@
   padding: 0 0 140px;
 }
 
-// .trainers__container {
-//   position: relative;
-// }
+.trainers__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .trainers__swiper-wrapper {
   position: relative;
+  width: 100%;
+
+  @include vp-1199 {
+    width: 73.7vw;
+  }
+
+  @include vp-767 {
+    width: 70.6vw;
+  }
 }
 
 .trainers__swiper {
-  margin-right: -30px;
+  @include vp-1199 {
+    width: calc(566px + (73.2vw - 566px) * 0.5);
+  }
+
+  @include vp-767 {
+    width: auto;
+  }
 }
