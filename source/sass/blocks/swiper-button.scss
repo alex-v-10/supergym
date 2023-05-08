@@ -1,10 +1,6 @@
 .swiper-button--next {
-  right: -65px;
+  right: -62px;
   left: auto;
-
-  @include vp-1199 {
-    right: -50px;
-  }
 
   @include vp-767 {
     right: -40px;
@@ -13,11 +9,7 @@
 
 .swiper-button--prev {
   right: auto;
-  left: -65px;
-
-  @include vp-1199 {
-    left: -50px;
-  }
+  left: -62px;
 
   @include vp-767 {
     left: -40px;
@@ -31,6 +23,14 @@
     color: $color-grey-4;
     font-size: 40px;
     font-weight: 400;
+
+    @include vp-1199 {
+      font-size: 34px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+    }
   }
 
   @include interactive-1;
