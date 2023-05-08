@@ -1,0 +1,36 @@
+.swiper-button--next {
+  right: -65px;
+  left: auto;
+}
+
+.swiper-button--prev {
+  right: auto;
+  left: -65px;
+}
+
+.swiper-button {
+  &::before,
+  &::after {
+    transition: color $trans-default;
+    color: $color-grey-4;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  @include interactive-1;
+
+  @include hover-focus {
+    &::before,
+    &::after {
+      color: $color-red;
+    }
+
+    @include active {
+      transform: scale(0.9);
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

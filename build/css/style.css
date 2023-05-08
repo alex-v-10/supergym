@@ -601,7 +601,6 @@ template {
 .swiper-button-next:after {
   font-family: swiper-icons;
   font-size: var(--swiper-navigation-size);
-  text-transform: none !important;
   letter-spacing: 0;
   text-transform: none;
   font-variant: initial;
@@ -747,7 +746,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-pagination-bullet:only-child {
-  display: none !important;
+  display: none;
 }
 
 .swiper-pagination-bullet-active {
@@ -1491,6 +1490,72 @@ button,
     font-size: 32px;
     line-height: 38px;
   }
+}
+
+.swiper-button--next {
+  right: -65px;
+  left: auto;
+}
+
+.swiper-button--prev {
+  right: auto;
+  left: -65px;
+}
+
+.swiper-button {
+  -webkit-transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.swiper-button::before, .swiper-button::after {
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  color: #AFAFAF;
+  font-size: 40px;
+  font-weight: 400;
+}
+@media (hover: hover) {
+  .swiper-button:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+  .swiper-button:hover:not(.focus-visible):active {
+    opacity: 0.5;
+  }
+}
+.swiper-button.focus-visible:focus {
+  opacity: 0.7;
+}
+.swiper-button.focus-visible:focus:active {
+  opacity: 0.5;
+}
+.swiper-button:active {
+  opacity: 0.5;
+}
+@media (hover: hover) {
+  .swiper-button:hover:not(.focus-visible)::before, .swiper-button:hover:not(.focus-visible)::after {
+    color: #ed0233;
+  }
+  .swiper-button:hover:not(.focus-visible).focus-visible:active {
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+.swiper-button.focus-visible:focus::before, .swiper-button.focus-visible:focus::after {
+  color: #ed0233;
+}
+.swiper-button.focus-visible:focus.focus-visible:active {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.swiper-button:active {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .trainer-card {
@@ -3412,11 +3477,15 @@ button,
   padding: 0 0 140px;
 }
 
-.trainers__container {
+.trainers__swiper-wrapper {
   position: relative;
 }
 
-.reviews__container {
+.trainers__swiper {
+  margin-right: -30px;
+}
+
+.reviews__swiper-wrapper {
   position: relative;
 }
 

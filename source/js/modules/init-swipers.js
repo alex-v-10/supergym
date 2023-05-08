@@ -5,8 +5,8 @@ export const initSwipers = () => {
     direction: 'horizontal',
     loop: true,
     navigation: {
-      nextEl: '.trainers__swiper-button-next',
-      prevEl: '.trainers__swiper-button-prev',
+      nextEl: '.trainers__next',
+      prevEl: '.trainers__prev',
     },
     slidesPerView: 4,
   });
@@ -15,8 +15,8 @@ export const initSwipers = () => {
     direction: 'horizontal',
     loop: true,
     navigation: {
-      nextEl: '.reviews__swiper-button-next',
-      prevEl: '.reviews__swiper-button-prev',
+      nextEl: '.reviews__next',
+      prevEl: '.reviews__prev',
     },
   });
 };
