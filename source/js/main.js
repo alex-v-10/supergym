@@ -5,6 +5,7 @@ import {initNoJs} from './modules/no-js';
 import {initVideo} from './modules/video';
 import {initShadow} from './modules/shadow';
 import {initTabs} from './modules/tabs/init-tabs';
+import {initSwipers} from './modules/init-swipers';
 
 // ---------------------------------
 
@@ -29,6 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initTabs();
     initShadow();
+    initSwipers();
   });
 });
 

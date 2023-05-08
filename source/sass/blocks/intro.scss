@@ -130,7 +130,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 13px 235px;
+    margin: 0 0 15px 235px;
     font-size: 24px;
     line-height: 30px;
   }
@@ -163,6 +163,7 @@
 .intro__description ul {
   margin: -98px 262px 82px 0;
   padding: 0;
+  max-width: 115px;
   list-style: none;
   font-size: 14px;
   line-height: 150%;
