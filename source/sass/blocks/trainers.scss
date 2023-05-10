@@ -1,12 +1,12 @@
 .trainers {
-  padding: 5px 0 140px;
+  padding: 5px 0 130px;
 
   @include vp-1199 {
-    padding: 0 0 100px;
+    padding: 0 0 90px;
   }
 
   @include vp-767 {
-    padding: 0 0 70px;
+    padding: 0 0 60px;
   }
 }
 
@@ -17,16 +17,16 @@
 }
 
 .trainers__title {
-  margin: 0 0 48px;
+  margin: 0 0 38px;
   align-self: flex-start;
 
   @include vp-1199 {
-    margin: 0 0 32px -5px;
+    margin: 0 0 22px -5px;
     align-self: center;
   }
 
   @include vp-767 {
-    margin: 0 0 42px -5px;
+    margin: 0 0 32px -5px;
   }
 }
 
@@ -44,6 +44,8 @@
 }
 
 .trainers__swiper {
+  padding: 10px 0;
+
   @include vp-1199 {
     width: calc(566px + (73.2vw - 566px) * 0.5);
   }

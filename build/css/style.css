@@ -1608,6 +1608,18 @@ button,
     height: 274px;
   }
 }
+.trainer-card:hover, .trainer-card:focus-within {
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.trainer-card:hover .trainer-card__content, .trainer-card:focus-within .trainer-card__content {
+  background-color: rgba(16, 38, 84, 0.9);
+}
+.trainer-card:hover .trainer-card__content p,
+.trainer-card:hover .trainer-card__content ul, .trainer-card:focus-within .trainer-card__content p,
+.trainer-card:focus-within .trainer-card__content ul {
+  display: block;
+}
 
 .trainer-card__photo {
   width: 100%;
@@ -1638,7 +1650,7 @@ button,
       -ms-flex-align: center;
           align-items: center;
   color: #ffffff;
-  background-color: rgba(16, 38, 84, 0.9);
+  background-color: rgba(255, 255, 255, 0);
   overflow-y: auto;
   /* width */
   /* Track */
@@ -1653,6 +1665,11 @@ button,
 @media (max-width: 1199px) {
   .trainer-card__content {
     padding: 20px 46px;
+  }
+}
+@media (max-width: 767px) {
+  .trainer-card__content {
+    padding: 20px 28px;
   }
 }
 .trainer-card__content::-webkit-scrollbar {
@@ -1678,30 +1695,32 @@ button,
 }
 
 .trainer-card__content p {
-  margin: 0 0 45px;
+  display: none;
+  margin: 0 0 32px;
   line-height: 150%;
   opacity: 0.6;
 }
 @media (max-width: 1365px) {
   .trainer-card__content p {
-    margin: 0 0 3.3vw;
+    margin: 0 0 2.34vw;
   }
 }
 @media (max-width: 1199px) {
   .trainer-card__content p {
-    margin: 0 0 45px;
+    margin: 0 0 32px;
   }
 }
 
 .trainer-card__content ul {
+  display: none;
   margin: 0 0 auto;
-  padding: 0 0 0 15px;
+  padding: 0 0 0 24px;
   font-size: 14px;
   line-height: 150%;
 }
 
 .trainer-card__content li:not(:last-child) {
-  margin: 0 0 15px;
+  margin: 0 0 14px;
 }
 
 .review-card {
@@ -3367,11 +3386,13 @@ button,
           box-shadow: 0 0 10px #102654;
 }
 
-.price-card:hover {
+.price-card:hover,
+.price-card:focus-within {
   background: -o-linear-gradient(320deg, #ed0233 12.6%, #003eb7 90.31%);
   background: linear-gradient(130deg, #ed0233 12.6%, #003eb7 90.31%);
 }
-.price-card:hover .price-card__button {
+.price-card:hover .price-card__button,
+.price-card:focus-within .price-card__button {
   background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
   background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   color: #ffffff;
@@ -3379,16 +3400,19 @@ button,
           box-shadow: none;
 }
 @media (hover: hover) {
-  .price-card:hover .price-card__button:hover:not(.focus-visible) {
+  .price-card:hover .price-card__button:hover:not(.focus-visible),
+.price-card:focus-within .price-card__button:hover:not(.focus-visible) {
     -webkit-box-shadow: 0 0 10px #102654;
             box-shadow: 0 0 10px #102654;
   }
 }
-.price-card:hover .price-card__button.focus-visible:focus {
+.price-card:hover .price-card__button.focus-visible:focus,
+.price-card:focus-within .price-card__button.focus-visible:focus {
   -webkit-box-shadow: 0 0 10px #102654;
           box-shadow: 0 0 10px #102654;
 }
-.price-card:hover .price-card__button:active {
+.price-card:hover .price-card__button:active,
+.price-card:focus-within .price-card__button:active {
   -webkit-box-shadow: 0 0 10px #102654;
           box-shadow: 0 0 10px #102654;
 }
@@ -3620,16 +3644,16 @@ button,
 }
 
 .trainers {
-  padding: 5px 0 140px;
+  padding: 5px 0 130px;
 }
 @media (max-width: 1199px) {
   .trainers {
-    padding: 0 0 100px;
+    padding: 0 0 90px;
   }
 }
 @media (max-width: 767px) {
   .trainers {
-    padding: 0 0 70px;
+    padding: 0 0 60px;
   }
 }
 
@@ -3647,13 +3671,13 @@ button,
 }
 
 .trainers__title {
-  margin: 0 0 48px;
+  margin: 0 0 38px;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 @media (max-width: 1199px) {
   .trainers__title {
-    margin: 0 0 32px -5px;
+    margin: 0 0 22px -5px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -3661,7 +3685,7 @@ button,
 }
 @media (max-width: 767px) {
   .trainers__title {
-    margin: 0 0 42px -5px;
+    margin: 0 0 32px -5px;
   }
 }
 
@@ -3680,6 +3704,9 @@ button,
   }
 }
 
+.trainers__swiper {
+  padding: 10px 0;
+}
 @media (max-width: 1199px) {
   .trainers__swiper {
     width: calc(566px + (73.2vw - 566px) * 0.5);

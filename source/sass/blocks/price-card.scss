@@ -99,7 +99,8 @@
   @include interactive--shadow-black;
 }
 
-.price-card:hover {
+.price-card:hover,
+.price-card:focus-within {
   background: linear-gradient(130deg, #ed0233 12.6%, #003eb7 90.31%);
 
   .price-card__button {
