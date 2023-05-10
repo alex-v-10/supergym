@@ -1234,7 +1234,7 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 140%;
+  line-height: 150%;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #102654;
   -webkit-font-smoothing: antialiased;
@@ -1582,6 +1582,7 @@ button,
 }
 
 .trainer-card {
+  position: relative;
   margin: 0 auto;
   width: 260px;
   height: 294px;
@@ -1602,9 +1603,105 @@ button,
 }
 @media (max-width: 767px) {
   .trainer-card {
-    width: 226px;
+    width: 100%;
+    max-width: 268px;
     height: 274px;
   }
+}
+
+.trainer-card__photo {
+  width: 100%;
+  height: 100%;
+}
+.trainer-card__photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.trainer-card__content {
+  padding: 20px 46px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  background-color: rgba(16, 38, 84, 0.9);
+  overflow-y: auto;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+@media (max-width: 1365px) {
+  .trainer-card__content {
+    padding: 1.46vw calc(3.37vw + (3.37vw - 46px) * 2);
+  }
+}
+@media (max-width: 1199px) {
+  .trainer-card__content {
+    padding: 20px 46px;
+  }
+}
+.trainer-card__content::-webkit-scrollbar {
+  width: 10.5px;
+}
+.trainer-card__content::-webkit-scrollbar-track {
+  background: #102654;
+}
+.trainer-card__content::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 3px solid #102654; /* should match background, can't be transparent */
+  background-color: #ffffff;
+}
+.trainer-card__content::-webkit-scrollbar-thumb:hover {
+  background: #ed0233;
+}
+
+.trainer-card__content h3 {
+  margin: auto 0 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.trainer-card__content p {
+  margin: 0 0 45px;
+  line-height: 150%;
+  opacity: 0.6;
+}
+@media (max-width: 1365px) {
+  .trainer-card__content p {
+    margin: 0 0 3.3vw;
+  }
+}
+@media (max-width: 1199px) {
+  .trainer-card__content p {
+    margin: 0 0 45px;
+  }
+}
+
+.trainer-card__content ul {
+  margin: 0 0 auto;
+  padding: 0 0 0 15px;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.trainer-card__content li:not(:last-child) {
+  margin: 0 0 15px;
 }
 
 .review-card {
@@ -3574,12 +3671,12 @@ button,
 }
 @media (max-width: 1199px) {
   .trainers__swiper-wrapper {
-    width: 73.7vw;
+    width: calc(73.7vw + (566px - 73.7vw) * 0.5);
   }
 }
 @media (max-width: 767px) {
   .trainers__swiper-wrapper {
-    width: 70.6vw;
+    width: calc(70.6vw + (226px - 70.6vw) * 0.5);
   }
 }
 

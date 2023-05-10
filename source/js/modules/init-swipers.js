@@ -13,11 +13,11 @@ export const initSwipers = () => {
       320: {
         slidesPerView: 1,
       },
-      768: {
+      767: {
         slidesPerView: 2,
         spaceBetween: 30,
       },
-      1200: {
+      1199: {
         slidesPerView: 4,
       },
     },
@@ -30,5 +30,6 @@ export const initSwipers = () => {
       nextEl: '.reviews__next',
       prevEl: '.reviews__prev',
     },
+    spaceBetween: 40,
   });
 };
