@@ -1735,6 +1735,115 @@ button,
   }
 }
 
+.advantage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+  grid-template-columns: auto 1fr;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.advantage h3 {
+  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 150%;
+}
+.advantage p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.advantage__text-number {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.advantage__text-large {
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 100%;
+  background: -o-linear-gradient(307.49deg, #d10a42 0%, #0041ca 87.33%);
+  background: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.advantage__text-small {
+  font-size: 14px;
+  line-height: 150%;
+  color: #103aae;
+}
+
+.advantage--main {
+  background-color: #1c3374;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.advantage--main .advantage__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 180px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.advantage--main h3 {
+  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 150%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.advantage--main p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+}
+.advantage--main span {
+  font-size: 74px;
+  line-height: 100%;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -3751,6 +3860,12 @@ button,
   .reviews__swiper {
     width: 70.6vw;
   }
+}
+
+.advantages__list-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .footer {
