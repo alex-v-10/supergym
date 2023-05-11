@@ -5,14 +5,14 @@
   column-gap: 30px;
 
   h3 {
-    margin: 0 0 20px;
+    margin: 4px 0 0;
     font-weight: 700;
     font-size: 22px;
     line-height: 150%;
   }
 
   p {
-    margin: 0;
+    margin: -2px 0 0;
     font-weight: 300;
     font-size: 16px;
     line-height: 140%;
@@ -37,6 +37,7 @@
 }
 
 .advantage__text-small {
+  margin: -4px 0 0;
   font-size: 14px;
   line-height: 150%;
   color: $color-blue-3;
@@ -48,6 +49,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 
   .advantage__container {
     display: flex;
@@ -57,7 +59,7 @@
   }
 
   h3 {
-    margin: 0 0 20px;
+    margin: 0 0 33px;
     font-weight: 700;
     font-size: 26px;
     line-height: 150%;
@@ -74,6 +76,7 @@
   }
 
   span {
+    margin: 0 0 0 10px;
     font-size: 74px;
     line-height: 100%;
   }

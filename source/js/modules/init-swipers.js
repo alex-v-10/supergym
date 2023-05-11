@@ -12,6 +12,7 @@ export const initSwipers = () => {
     breakpoints: {
       320: {
         slidesPerView: 1,
+        spaceBetween: 40,
       },
       767: {
         slidesPerView: 2,
@@ -19,6 +20,7 @@ export const initSwipers = () => {
       },
       1199: {
         slidesPerView: 4,
+        spaceBetween: 40,
       },
     },
   });
