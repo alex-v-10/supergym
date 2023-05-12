@@ -1,13 +1,26 @@
 .discount {
   padding: 100px 0;
 
+  @include vp-1199 {
+    padding: 93px 0;
+  }
+
   @include vp-767 {
-    padding: 70px 0;
+    padding: 65px 0;
   }
 }
 
 .discount__title {
+  margin: 0 0 34px;
   text-align: center;
+
+  @include vp-1199 {
+    margin: 0 10px 40px 0;
+  }
+
+  @include vp-767 {
+    margin: 0 5px 40px 0;
+  }
 }
 
 .discount__list {
@@ -52,7 +65,7 @@
 }
 
 .discount__content {
-  padding: 28px;
+  padding: 18px 28px 28px;
   height: 100%;
   background-color: $color-default-white;
   display: flex;
@@ -60,13 +73,13 @@
   align-items: flex-start;
 
   @include vp-767 {
-    padding: 39px;
+    padding: 29px 39px 40px;
     align-items: center;
     text-align: center;
   }
 
   h3 {
-    margin: 0 0 20px;
+    margin: 0 0 3px;
     font-weight: 700;
     font-size: 26px;
     line-height: 150%;
@@ -79,7 +92,7 @@
 
   a {
     margin: auto 0 0;
-    padding: 5px 0;
+    padding: 0;
     display: block;
     font-weight: 700;
     font-size: 12px;
@@ -132,7 +145,7 @@
   }
 
   .discount__content {
-    padding: 45px;
+    padding: 35px 45px 45px;
     width: 280px;
     background-color: $color-transparent;
     flex-grow: 1;
@@ -145,19 +158,25 @@
   }
 
   h3 {
+    margin: 0 0 30px;
     font-weight: 700;
     font-size: 28px;
     line-height: 156%;
     display: flex;
     flex-direction: column;
+
+    @include vp-767 {
+      margin: 0 0 28px;
+    }
   }
 
   span {
-    margin: 20px 0 0;
+    margin: 8px 0 0;
     font-size: 70px;
   }
 
   p {
+    margin: 0 0 30px;
     font-size: 18px;
     line-height: 140%;
   }

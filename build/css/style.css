@@ -4044,14 +4044,30 @@ button,
 .discount {
   padding: 100px 0;
 }
+@media (max-width: 1199px) {
+  .discount {
+    padding: 93px 0;
+  }
+}
 @media (max-width: 767px) {
   .discount {
-    padding: 70px 0;
+    padding: 65px 0;
   }
 }
 
 .discount__title {
+  margin: 0 0 34px;
   text-align: center;
+}
+@media (max-width: 1199px) {
+  .discount__title {
+    margin: 0 10px 40px 0;
+  }
+}
+@media (max-width: 767px) {
+  .discount__title {
+    margin: 0 5px 40px 0;
+  }
 }
 
 .discount__list ul {
@@ -4107,7 +4123,7 @@ button,
 }
 
 .discount__content {
-  padding: 28px;
+  padding: 18px 28px 28px;
   height: 100%;
   background-color: #ffffff;
   display: -webkit-box;
@@ -4123,7 +4139,7 @@ button,
 }
 @media (max-width: 767px) {
   .discount__content {
-    padding: 39px;
+    padding: 29px 39px 40px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -4131,7 +4147,7 @@ button,
   }
 }
 .discount__content h3 {
-  margin: 0 0 20px;
+  margin: 0 0 3px;
   font-weight: 700;
   font-size: 26px;
   line-height: 150%;
@@ -4142,7 +4158,7 @@ button,
 }
 .discount__content a {
   margin: auto 0 0;
-  padding: 5px 0;
+  padding: 0;
   display: block;
   font-weight: 700;
   font-size: 12px;
@@ -4222,7 +4238,7 @@ button,
      object-position: top;
 }
 .discount__item--main .discount__content {
-  padding: 45px;
+  padding: 35px 45px 45px;
   width: 280px;
   background-color: rgba(255, 255, 255, 0);
   -webkit-box-flex: 1;
@@ -4239,6 +4255,7 @@ button,
   }
 }
 .discount__item--main h3 {
+  margin: 0 0 30px;
   font-weight: 700;
   font-size: 28px;
   line-height: 156%;
@@ -4250,11 +4267,17 @@ button,
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media (max-width: 767px) {
+  .discount__item--main h3 {
+    margin: 0 0 28px;
+  }
+}
 .discount__item--main span {
-  margin: 20px 0 0;
+  margin: 8px 0 0;
   font-size: 70px;
 }
 .discount__item--main p {
+  margin: 0 0 30px;
   font-size: 18px;
   line-height: 140%;
 }
