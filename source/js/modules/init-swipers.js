@@ -27,7 +27,7 @@ export const initSwipers = () => {
 
   const reviewsSwiper = new Swiper('.reviews__swiper', {
     direction: 'horizontal',
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: '.reviews__next',
       prevEl: '.reviews__prev',
