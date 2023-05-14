@@ -1,21 +1,16 @@
 .free {
-  padding: 56px 0 70px;
+  padding: 56px 103px 70px;
   width: 50%;
   color: $color-default-white;
   background-color: $color-default-black;
 
-  @include vp-1199 {
-    width: 100%;
+  @include vp-1365 {
+    padding: 56px 7.54vw 70px;
   }
 
-  .container {
-    @include vp-1365 {
-      padding: 0 7.54vw;
-    }
-
-    @include vp-1199 {
-      padding: 0 133px;
-    }
+  @include vp-1199 {
+    padding: 50px 133px;
+    width: 100%;
   }
 }
 
