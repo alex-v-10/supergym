@@ -155,8 +155,12 @@
   }
 
   @include vp-767 {
-    margin: 0 0 0 100px;
+    margin: 0 0 0 171px;
     letter-spacing: 1.5px;
+    width: 186px;
+    min-height: 172px;
+    text-indent: -36px;
+    text-align: start;
   }
 }
 
