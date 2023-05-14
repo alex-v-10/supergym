@@ -16,6 +16,15 @@
   src: url("../fonts/alumni-sans-v16-cyrillic_latin-600.woff2") format("woff2"),
     url("../fonts/alumni-sans-v16-cyrillic_latin-600.woff") format("woff");
 }
+/* alumni-sans-700 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  font-family: "Alumni Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/alumni-sans-v16-cyrillic_latin-700.woff2") format("woff2"),
+    url("../fonts/alumni-sans-v16-cyrillic_latin-700.woff") format("woff");
+}
 /* alumni-sans-800 - cyrillic_latin */
 @font-face {
   font-display: swap;
