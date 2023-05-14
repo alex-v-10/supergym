@@ -1,6 +1,18 @@
 .double-section {
+  background-image: linear-gradient(90deg, $color-default-black 50%, $color-transparent 50%);
+
+  @include vp-1199 {
+    background-image: none;
+  }
+}
+
+.double-section__inner {
   width: 100%;
   max-width: $vp-1366;
   margin: 0 auto;
   display: flex;
+
+  @include vp-1199 {
+    flex-direction: column;
+  }
 }

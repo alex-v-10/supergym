@@ -2762,9 +2762,16 @@ button,
   display: none;
 }
 
+.form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 .form input {
   padding: 10px 0;
-  width: 190px;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0);
   border: none;
   border-bottom: 1px solid #495a7d;
@@ -2774,11 +2781,11 @@ button,
 }
 @media (hover: hover) {
   .form input:hover:not(.focus-visible) {
-    background-color: #103aae;
+    background-color: #1c3374;
   }
 }
 .form input.focus-visible:focus {
-  background-color: #103aae;
+  background-color: #1c3374;
 }
 .form input::-webkit-input-placeholder {
   color: #ffffff;
@@ -2802,20 +2809,25 @@ button,
 }
 @media (hover: hover) {
   .form input:-webkit-autofill:hover:not(.focus-visible) {
-    -webkit-box-shadow: inset 0 0 0 1000px #103aae;
-            box-shadow: inset 0 0 0 1000px #103aae;
+    -webkit-box-shadow: inset 0 0 0 1000px #1c3374;
+            box-shadow: inset 0 0 0 1000px #1c3374;
   }
 }
 .form input:-webkit-autofill.focus-visible:focus {
-  -webkit-box-shadow: inset 0 0 0 1000px #103aae;
-          box-shadow: inset 0 0 0 1000px #103aae;
+  -webkit-box-shadow: inset 0 0 0 1000px #1c3374;
+          box-shadow: inset 0 0 0 1000px #1c3374;
 }
 
 .form__item {
-  display: inline-block;
+  width: 190px;
+}
+@media (max-width: 1199px) {
+  .form__item {
+    width: 206px;
+  }
 }
 .form__item:nth-child(2n) {
-  margin: 0 0 0 20px;
+  margin: 0 0 0 auto;
 }
 
 .form__submit {
@@ -4470,6 +4482,17 @@ button,
 }
 
 .double-section {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #102654), color-stop(50%, rgba(255, 255, 255, 0)));
+  background-image: -o-linear-gradient(left, #102654 50%, rgba(255, 255, 255, 0) 50%);
+  background-image: linear-gradient(90deg, #102654 50%, rgba(255, 255, 255, 0) 50%);
+}
+@media (max-width: 1199px) {
+  .double-section {
+    background-image: none;
+  }
+}
+
+.double-section__inner {
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
@@ -4477,25 +4500,136 @@ button,
   display: -ms-flexbox;
   display: flex;
 }
+@media (max-width: 1199px) {
+  .double-section__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .free {
   padding: 56px 0 70px;
   width: 50%;
-  background-color: #102654;
   color: #ffffff;
+  background-color: #102654;
+}
+@media (max-width: 1199px) {
+  .free {
+    width: 100%;
+  }
+}
+@media (max-width: 1365px) {
+  .free .container {
+    padding: 0 7.54vw;
+  }
+}
+@media (max-width: 1199px) {
+  .free .container {
+    padding: 0 133px;
+  }
+}
+
+.free__container {
+  max-width: 410px;
+}
+@media (max-width: 1199px) {
+  .free__container {
+    margin: 0 auto;
+    max-width: 600px;
+  }
 }
 
 .free__title {
   margin: 0 0 20px;
   font-weight: 800;
 }
-
-.free__form {
-  max-width: 410px;
+@media (max-width: 1199px) {
+  .free__title {
+    font-weight: 700;
+  }
+}
+@media (max-width: 767px) {
+  .free__title {
+    font-weight: 600;
+  }
 }
 
 .contacts {
   width: 50%;
+}
+@media (max-width: 1199px) {
+  .contacts {
+    width: 100%;
+  }
+}
+.contacts .container {
+  padding: 0 120px;
+}
+@media (max-width: 1365px) {
+  .contacts .container {
+    padding: 0 8.78vw;
+  }
+}
+@media (max-width: 1199px) {
+  .contacts .container {
+    padding: 0 133px;
+  }
+}
+
+.contacts__container {
+  width: 100%;
+  min-width: 400px;
+}
+@media (max-width: 1199px) {
+  .contacts__container {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+}
+
+.contacts__list {
+  width: 100%;
+  position: relative;
+}
+.contacts__list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 170px 170px;
+  grid-template-columns: 170px 170px;
+  row-gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contacts__list li:nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+.contacts__list h3 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 150%;
+}
+.contacts__list p,
+.contacts__list a {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+.contacts__list::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: #495a7d;
 }
 
 .footer {

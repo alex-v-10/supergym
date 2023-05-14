@@ -579,31 +579,61 @@
       </section>
       <!-- ? double-section free contacts-->
       <div class="double-section">
-        <!-- ? free -->
-        <section class="free">
-          <div class="container">
-            <h2 class="free__title title">Бесплатное занятие</h2>
-            <div class="free__form form">
-              <form action="https://echo.htmlacademy.ru/" method="post">
-                <div class="form__item">
-                  <label>
-                    <input type="text" name="name" id="name" placeholder="Имя" aria-label="Имя" required>
-                  </label>
+        <div class="double-section__inner">
+          <!-- ? free -->
+          <section class="free">
+            <div class="container">
+              <div class="free__container">
+                <h2 class="free__title title">Бесплатное занятие</h2>
+                <div class="free__form form">
+                  <form action="https://echo.htmlacademy.ru/" method="post">
+                    <div class="form__item">
+                      <label>
+                        <input type="text" name="name" id="name" placeholder="Имя" aria-label="Имя" required>
+                      </label>
+                    </div>
+                    <div class="form__item">
+                      <label>
+                        <input type="tel" name="phone" id="phone" placeholder="Телефон" aria-label="Телефон" required>
+                      </label>
+                    </div>
+                    <div class="form__submit">
+                      <button class="form__submit-button btn" type="submit">отправить</button>
+                    </div>
+                  </form>
                 </div>
-                <div class="form__item">
-                  <label>
-                    <input type="tel" name="phone" id="phone" placeholder="Телефон" aria-label="Телефон" required>
-                  </label>
-                </div>
-                <div class="form__submit">
-                  <button class="form__submit-button btn" type="submit">отправить</button>
-                </div>
-              </form>
+              </div>
             </div>
-          </div>
-        </section>
-        <!-- ? contacts -->
-        <section class="contacts"></section>
+          </section>
+          <!-- ? contacts -->
+          <section class="contacts">
+            <div class="container">
+              <div class="contacts__container">
+                <h2 class="contacts__title title">Контакты</h2>
+                <div class="contacts__list">
+                  <ul>
+                    <li>
+                      <h3>Адрес:</h3>
+                      <p>г. Омск, ул.&nbsp;60&nbsp;лет Октября, 7</p>
+                    </li>
+                    <li>
+                      <h3>График работы:</h3>
+                      <p>Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</p>
+                    </li>
+                    <li>
+                      <h3>Телефон:</h3>
+                      <a href="tel:88005555555">8-800-555-55-55</a>
+                    </li>
+                    <li>
+                      <h3>Email:</h3>
+                      <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                    </li>
+                  </ul>
+                </div>
+              </d>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
     <footer class="footer">
