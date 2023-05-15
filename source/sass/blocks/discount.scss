@@ -175,6 +175,9 @@
   span {
     margin: 8px 0 0;
     font-size: 70px;
+    max-width: 142px;
+    display: flex;
+    justify-content: center;
   }
 
   p {
