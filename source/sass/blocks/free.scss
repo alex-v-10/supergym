@@ -1,11 +1,11 @@
 .free {
-  padding: 66px 103px 70px;
+  padding: 65px 103px 70px;
   width: 50%;
   color: $color-default-white;
   background-color: $color-default-black;
 
   @include vp-1365 {
-    padding: 66px 7.54vw 70px;
+    padding: 65px 7.54vw 70px;
   }
 
   @include vp-1199 {
@@ -32,7 +32,7 @@
 }
 
 .free__title {
-  margin: 0 0 22px;
+  margin: 0 0 23px;
   font-weight: 800;
 
   @include vp-1199 {

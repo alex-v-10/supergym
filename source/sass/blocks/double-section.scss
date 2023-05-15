@@ -1,8 +1,10 @@
 .double-section {
   background-image: linear-gradient(90deg, $color-default-black 50%, $color-transparent 50%);
+  border-top: 1px solid $color-grey-2;
 
   @include vp-1199 {
     background-image: none;
+    border-top: none;
   }
 }
 
