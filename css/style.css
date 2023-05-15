@@ -3000,6 +3000,10 @@ button,
   text-align: center;
 }
 
+.discount__list {
+  margin: 0 auto;
+}
+
 .discount__list ul {
   list-style: none;
   margin: 0;
@@ -4122,6 +4126,7 @@ button,
   }
 
   .games__container {
+    max-width: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -4133,16 +4138,8 @@ button,
     width: 100%;
   }
 
-  .games__image {
-    height: 91.25vw;
-    max-height: 400px;
-    overflow: hidden;
-  }
-
   .games__image img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: auto;
   }
 
   .games__description {
