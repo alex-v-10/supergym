@@ -86,49 +86,8 @@
   }
 }
 
-// Mobile first
-
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
-
-// ---------------------------------
-
 // не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
 // этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта
-
 
 @mixin visually-hidden {
   position: absolute;
@@ -149,6 +108,7 @@
 
 @mixin interactive-1 {
   transition: opacity $trans-default, box-shadow $trans-default;
+
   @include hover-focus {
     opacity: 0.7;
 

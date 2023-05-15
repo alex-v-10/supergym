@@ -10,3 +10,6 @@ env:
   commonjs: true
 
 extends: "./eslintconfig.cjs"
+
+globals:
+  Swiper: readonly

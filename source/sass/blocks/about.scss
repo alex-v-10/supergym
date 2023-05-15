@@ -42,8 +42,6 @@
     height: auto;
     width: calc(100% + 30px);
     align-self: center;
-    aspect-ratio: 6.6 / 4;
-    min-height: 313px;
   }
 
   img {
@@ -51,6 +49,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    @include vp-767 {
+      height: auto;
     }
   }
 }

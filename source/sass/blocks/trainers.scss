@@ -54,3 +54,17 @@
     width: auto;
   }
 }
+
+.no-js .trainers__swiper {
+  .swiper-wrapper {
+    width: 25%;
+
+    @include vp-1199 {
+      width: 50%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+}

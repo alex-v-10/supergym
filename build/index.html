@@ -56,7 +56,7 @@
                   <li>Кардио-зона</li>
                 </ul>
               </div>
-              <a class="intro__button btn" href="#">Купить абонемент</a>
+              <a class="intro__button btn" href="#price">Купить абонемент</a>
             </div>
             <div class="intro__image">
               <picture>
@@ -90,6 +90,10 @@
             </div>
             <div class="about__image">
               <picture>
+                <source media="(max-width: 767px)" type="image/webp"
+                  srcset="img/about/about-mobile.webp 1x, img/about/about-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="img/about/about-mobile.jpg 1x, img/about/about-mobile@2x.jpg 2x">
                 <source type="image/webp" srcset="img/about/about.webp 1x, img/about/about@2x.webp 2x">
                 <img width="660" height="401" src="img/about/about.jpg" srcset="img/about/about@2x.jpg 2x"
                   alt="Тренажеры в зале" loading="lazy">
@@ -101,25 +105,25 @@
                 <button class="video__button" aria-label="Запустить видео" data-video-play></button>
               </div>
               <iframe class="video__frame" src="https://www.youtube.com/embed/9TZXsZItgdw?mute=1&autoplay=1" width="364"
-                height="228" frameborder="0" allow="autoplay"></iframe>
+                height="228" allow="autoplay" loading="lazy"></iframe>
             </div>
           </div>
         </div>
       </section>
       <!-- ? price -->
-      <section class="price">
+      <section class="price" id="price">
         <div class="container">
           <div class="price__container">
             <h2 class="price__title title">Абонементы</h2>
             <div class="price__tabs" data-tabs="parent" data-delay="300">
               <div class="price__controls" data-tabs="controls">
-                <button class="price__button" type="button" data-tabs="control">1 месяц</button>
+                <button class="price__button is-active" type="button" data-tabs="control">1 месяц</button>
                 <button class="price__button" type="button" data-tabs="control">6 месяцев</button>
                 <button class="price__button" type="button" data-tabs="control">12 месяцев</button>
               </div>
               <div class="price__content" data-tabs="content">
                 <!-- ? element-1 -->
-                <div class="price__cards" data-tabs="element">
+                <div class="price__cards for-load" data-tabs="element">
                   <div class="price__card price-card">
                     <div class="price-card__container">
                       <h3 class="price-card__title">С тренером</h3>
@@ -234,8 +238,12 @@
             </div>
             <div class="games__image">
               <picture>
+                <source media="(max-width: 1199px)" type="image/webp"
+                  srcset="img/games/games-tablet.webp 1x, img/games/games-tablet@2x.webp 2x">
+                <source media="(max-width: 1199px)"
+                  srcset="img/games/games-tablet.jpg 1x, img/games/games-tablet@2x.jpg 2x">
                 <source type="image/webp" srcset="img/games/games.webp 1x, img/games/games@2x.webp 2x">
-                <img width="660" height="500" src="img/games/games.jpg" srcset="img/games/games@2x.jpg 2x" alt=""
+                <img width="660" height="500" src="games-tablet.jpg" srcset="img/games/games@2x.jpg 2x" alt=""
                   loading="lazy">
               </picture>
             </div>
@@ -243,7 +251,7 @@
         </div>
       </section>
       <!-- ? trainers -->
-      <section class="trainers">
+      <section class="trainers" id="trainers">
         <div class="container">
           <div class="trainers__container">
             <h2 class="trainers__title title">Тренеры</h2>
@@ -487,7 +495,7 @@
         </div>
       </section>
       <!-- ? discount -->
-      <section class="discount">
+      <section class="discount" id="discount">
         <div class="container">
           <div class="discount__container">
             <h2 class="discount__title title">Акции</h2>
@@ -655,13 +663,13 @@
                 <a href="#">Услуги</a>
               </li>
               <li>
-                <a href="#">Абонементы</a>
+                <a href="#price">Абонементы</a>
               </li>
               <li>
-                <a href="#">Акции</a>
+                <a href="#discount">Акции</a>
               </li>
               <li>
-                <a href="#">Тренеры</a>
+                <a href="#trainers">Тренеры</a>
               </li>
               <li>
                 <a href="#">Расписание</a>

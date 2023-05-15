@@ -1,12 +1,12 @@
-const shadowValues = document.querySelectorAll('[data-shadow]');
+const items = document.querySelectorAll('[data-shadow]');
 
 export const initShadow = () => {
-  if (shadowValues.length) {
-    for (const value of shadowValues) {
-      const parent = value.parentNode;
+  if (items.length) {
+    for (const item of items) {
+      const parent = item.parentNode;
       const shadow = document.createElement('span');
       shadow.classList.add('shadow');
-      shadow.innerHTML = value.innerHTML;
+      shadow.innerHTML = item.innerHTML;
       parent.prepend(shadow);
     }
   }
