@@ -42,6 +42,7 @@
 }
 
 .form__item {
+  position: relative;
   width: 190px;
 
   @include vp-1199 {
@@ -50,6 +51,23 @@
 
   @include vp-767 {
     width: 100%;
+  }
+
+  .input-message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 3px 0 0;
+    color: $color-yellow;
+    white-space: nowrap;
+  }
+
+  &.is-invalid {
+    outline: 2px solid $color-yellow;
   }
 }
 

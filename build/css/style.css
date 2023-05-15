@@ -2866,6 +2866,7 @@ button,
 }
 
 .form__item {
+  position: relative;
   width: 190px;
 }
 @media (max-width: 1199px) {
@@ -2877,6 +2878,21 @@ button,
   .form__item {
     width: 100%;
   }
+}
+.form__item .input-message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 3px 0 0;
+  color: #ffff00;
+  white-space: nowrap;
+}
+.form__item.is-invalid {
+  outline: 2px solid #ffff00;
 }
 
 .form__submit {
