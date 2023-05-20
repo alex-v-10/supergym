@@ -23,6 +23,10 @@ export const initSwipers = () => {
         spaceBetween: 40,
       },
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
   });
 
   const trainerCards = document.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate) .trainer-card');
@@ -52,6 +56,10 @@ export const initSwipers = () => {
         prevEl: '.reviews__prev',
       },
       spaceBetween: 40,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
     });
   })();
 };
